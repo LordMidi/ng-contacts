@@ -1,0 +1,10 @@
+$backgroundColor: rgb(222, 222, 222);
+
+li {
+  cursor: pointer;
+
+  &:nth-child(even) {
+    background: $backgroundColor;
+  }
+
+}

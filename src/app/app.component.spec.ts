@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ng-contacts');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render title in a header tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ng-contacts!');
+    expect(compiled.querySelector('header').textContent).toContain('contact manager');
   });
 });

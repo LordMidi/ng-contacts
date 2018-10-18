@@ -1,0 +1,102 @@
+<div class="container" *ngIf="contact">
+	<h2>edit contact</h2>
+	<form [formGroup]="contactFormGroup" (ngSubmit)="onSubmit()">
+		<div class="form-row form-group">
+			<div class="col-sm12 col-md-6 mb-3">
+				<label for="firstName">first name</label>
+				<input
+					autocomplete="off"
+					type="text"
+					class="form-control"
+					id="firstName"
+					placeholder="first name"
+					formControlName="firstName"
+					[ngClass]="{
+						'is-valid': contactFormGroup.controls['firstName'].valid,
+						'is-invalid': !contactFormGroup.controls['firstName'].valid
+					}"
+				>
+			</div>
+			<div class="col-sm12 col-md-6">
+				<label for="lastName">last name</label>
+				<input
+					autocomplete="off"
+					type="text"
+					class="form-control"
+					id="lastName"
+					placeholder="last name"
+					formControlName="lastName"
+					[ngClass]="{
+						'is-valid': contactFormGroup.controls['lastName'].valid,
+						'is-invalid': !contactFormGroup.controls['lastName'].valid
+					}"
+				>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="personnelNumber">personnel number</label>
+			<input
+				autocomplete="off"
+				type="text"
+				class="form-control"
+				id="personnelNumber"
+				placeholder="personnel number"
+				formControlName="personnelNumber"
+				[ngClass]="{
+					'is-valid': contactFormGroup.controls['personnelNumber'].valid,
+					'is-invalid': !contactFormGroup.controls['personnelNumber'].valid
+				}"
+			>
+			<small
+				*ngIf="!contactFormGroup.controls['personnelNumber'].valid"
+				class="form-text text-muted"
+			>format: "ABC-123456", no "0" after "-"</small>
+		</div>
+		<div class="form-row form-group">
+			<div class="col-sm12 col-md-6 mb-3">
+				<label for="birthdate">birthdate</label>
+				<input
+					autocomplete="off"
+					type="text"
+					class="form-control"
+					id="birthdate"
+					placeholder="birthdate"
+					formControlName="birthdate"
+					[ngClass]="{
+						'is-valid': contactFormGroup.controls['birthdate'].valid,
+						'is-invalid': !contactFormGroup.controls['birthdate'].valid
+					}"
+				>
+				<small
+					*ngIf="!contactFormGroup.controls['birthdate'].valid"
+					class="form-text text-muted"
+				>format: "31.12.1980", older than 18 years</small>				
+			</div>
+			<div class="col-sm12 col-md-6">
+				<label for="email">email</label>
+				<input
+					autocomplete="off"
+					type="text"
+					class="form-control"
+					id="email"
+					placeholder="email"
+					formControlName="email"
+					[ngClass]="{
+						'is-valid': contactFormGroup.controls['email'].valid,
+						'is-invalid': !contactFormGroup.controls['email'].valid
+					}"
+				>
+				<small
+					*ngIf="!contactFormGroup.controls['email'].valid"
+					class="form-text text-muted"
+				>format: "example@mail.org"</small>				
+			</div>
+		</div>
+		<button
+			type="submit"
+			class="btn btn-primary mr-1"
+			[disabled]="!contactFormGroup.valid"
+		>save</button>
+		<button class="btn btn-danger" routerLink="/">cancel</button>
+	</form>
+</div>

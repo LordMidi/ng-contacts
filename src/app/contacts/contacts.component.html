@@ -1,0 +1,23 @@
+<div class="container">
+	<ul class="list-group">
+		<li
+			class="list-group-item"
+			*ngFor="let contact of contacts"
+			routerLink="/contact/{{contact.id}}"
+		>
+			<div class="row">
+				<div class="col-sm-12 col-md-8 h3">
+					{{contact.lastName}}, {{contact.firstName}}
+				</div>
+				<div class="col-sm-12 col-md-4 text-md-right">
+						<div class="small text-black-50">
+							year of birth: {{contact.birthdate | date: 'y'}}
+						</div>
+						<div class="small text-info">
+							personnel no: {{contact.personnelNumber}}
+						</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
