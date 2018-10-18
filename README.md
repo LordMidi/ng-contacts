@@ -1,3 +1,9 @@
+### how 2 start
+- git clone https://github.com/LordMidi/ng-contacts.git
+- npm install
+- npx ng serve
+- open http://localhost:4200/
+
 ### Aufgabe: Mini-Kontaktverwaltung
 Bitte erstelle eine kleine Kontaktverwaltung mit Angular.
 
