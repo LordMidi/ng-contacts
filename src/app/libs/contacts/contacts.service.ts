@@ -9,8 +9,8 @@ import { Contact } from './contact';
 })
 export class ContactsService {
 
-  contacts: Observable<Contact[]>;
-  contactsObserver: Subscriber<Contact[]>;
+  private contacts: Observable<Contact[]>;
+  private contactsObserver: Subscriber<Contact[]>;
 
   constructor() {
     this.contacts = new Observable(observer => {

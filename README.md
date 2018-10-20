@@ -59,48 +59,48 @@ Bei der Erfassung von Kontaktinformationen gelten folgende Kriterien:
 - npm install --save bootstrap
 - include minified Bootstrap CSS in angular.json
 
-# add header
+## add header
 - add header element to global layout
 
-# show contacts component as default for / route
+## show contacts component as default for / route
 - configure path in contacts module for contacts component
 - configure path in app module for redirecting to contacts
 - remove contacts module import from app module
 
-# template for contacts component
+## template for contacts component
 - create dummy HTML for displaying contact list
 - styling
 
-# contact mock data
+## contact mock data
 - create file exporting constant holding mocked contacts
 - generate mock data
 
-# use mock data for contacts service
+## use mock data for contacts service
 - wrap mock into observable and provide getter function
 
-# wire up contact route & component
+## wire up contact route & component
 - remove contact module import from app module
 - add routing for module
 
-# template for contact component
+## template for contact component
 - create dummy HTML for displaying contact
 - styling
 
-# add routing links to contacts overview
+## add routing links to contacts overview
 - link into contact component with ids from contacts component list
 
-# load contact to edit
+## load contact to edit
 - identify contact via url param
 - fill component inputs with contact data
 
-# save updated data
+## save updated data
 - extending contacts service to support updating contact
 
-# add validation
+## add validation
 - add form controls for validation
 - implement custom validation for personnel number
 - implement custom validation & extra parser for birthdate field values
 - add error messages for invalid form fields
 
-# tests
+## tests
 - fixed test
